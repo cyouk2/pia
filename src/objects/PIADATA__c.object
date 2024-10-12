@@ -191,6 +191,31 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>X163__c</fullName>
+        <externalId>false</externalId>
+        <formula>inputup97__c - inputup163__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>X163</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>inputup80__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>inputup80</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>X22__c</fullName>
         <externalId>false</externalId>
         <formula>sum_kaiten__c  /  sum_tuujou__c</formula>
@@ -321,35 +346,10 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>jisuanhouhuizhuan__c</fullName>
-        <externalId>false</externalId>
-        <formula>kaiten_keisan__c + if( beforce__r.aren__c &gt; 1,130,100)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>計算後回転</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>kaiten__c</fullName>
+        <fullName>inputunder63__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>回転数</label>
-        <precision>4</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>kaiten_keisan__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>回転数_計算用</label>
+        <label>inputunder63</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -382,10 +382,35 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>inputunder63__c</fullName>
+        <fullName>jisuanhouhuizhuan__c</fullName>
+        <externalId>false</externalId>
+        <formula>kaiten_keisan__c + if( beforce__r.aren__c &gt; 1,130,100)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>計算後回転</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kaiten__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>inputunder63</label>
+        <label>回転数</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kaiten_keisan__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>回転数_計算用</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -606,6 +631,10 @@
         <columns>kaitensuu_15L__c</columns>
         <columns>totunyuuRate__c</columns>
         <columns>kaiten_max__c</columns>
+        <columns>inputunder63__c</columns>
+        <columns>inputup163__c</columns>
+        <columns>inputup97__c</columns>
+        <columns>X163__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>atype__c</field>
