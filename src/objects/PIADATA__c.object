@@ -204,18 +204,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>inputup80__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>inputup80</label>
-        <precision>4</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>X22__c</fullName>
         <externalId>false</externalId>
         <formula>sum_kaiten__c  /  sum_tuujou__c</formula>
@@ -313,6 +301,66 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>bk_inputunder40__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>bk_単発_35</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bk_inputunder63__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>bk_under63</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bk_inputup163__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>bk_up163_35</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bk_inputup80__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>bk_確変_60</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bk_inputup97__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>bk_up97_35</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>datesort__c</fullName>
         <externalId>false</externalId>
         <formula>LPAD(TEXT( tuujousort__c ), 2,&apos;0&apos;) + &apos;-&apos; +   RIGHT(TEXT(adate__c) , 1)</formula>
@@ -346,10 +394,22 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>inputunder40__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>単発_35</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>inputunder63__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>inputunder63</label>
+        <label>under63</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -361,7 +421,19 @@
         <fullName>inputup163__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>inputup163</label>
+        <label>up163_35</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>inputup80__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>確変_60</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -373,7 +445,7 @@
         <fullName>inputup97__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>inputup97</label>
+        <label>up97_35</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -629,12 +701,12 @@
         <columns>bk_X22__c</columns>
         <columns>kaitensuu_8L__c</columns>
         <columns>kaitensuu_15L__c</columns>
-        <columns>totunyuuRate__c</columns>
-        <columns>kaiten_max__c</columns>
-        <columns>inputunder63__c</columns>
         <columns>inputup163__c</columns>
+        <columns>inputunder40__c</columns>
         <columns>inputup97__c</columns>
+        <columns>inputup80__c</columns>
         <columns>X163__c</columns>
+        <columns>inputunder63__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>atype__c</field>
