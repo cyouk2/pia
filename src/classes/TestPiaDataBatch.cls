@@ -20,8 +20,8 @@ public with sharing class TestPiaDataBatch {
         TestPiaDataBatch.start_R();
     */
 
-     public static void start_R(){
-        TestPiaData_Dankai_R newbatch = new TestPiaData_Dankai_R(PIA_START_NO);
-        Database.executeBatch(newbatch);
-    }
+    //  public static void start_R(){
+    //     TestPiaData_Dankai_R newbatch = new TestPiaData_Dankai_R(PIA_START_NO);
+    //     Database.executeBatch(newbatch);
+    // }
 }

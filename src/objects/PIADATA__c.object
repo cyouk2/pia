@@ -178,50 +178,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Henkinn_ST_Kaisuu__c</fullName>
-        <externalId>false</externalId>
-        <formula>if(aren__c ==0,0, (kakuhenkaiten__c + 163) /  aren__c )</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>平均ST回数</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>X163__c</fullName>
-        <externalId>false</externalId>
-        <formula>inputup97__c - inputup163__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>X163</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>X22__c</fullName>
         <externalId>false</externalId>
         <formula>sum_kaiten__c  /  sum_tuujou__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>平均通常確率</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>X33__c</fullName>
-        <externalId>false</externalId>
-        <formula>sum_atari__c  /  sum_tuujou__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>平均連チャン数</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
@@ -370,28 +331,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>detama__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF(aren__c = 0,0,420+(aren__c -1)*1400)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>出玉</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>flag__c</fullName>
-        <externalId>false</externalId>
-        <formula>X33__c  &gt;=  rensuu_8L__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>フラグ</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>inputunder40__c</fullName>
@@ -587,19 +526,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>nyutama__c</fullName>
-        <externalId>false</externalId>
-        <formula>kaiten_keisan__c /10*250</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>入玉</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>rensuu_8L__c</fullName>
         <externalId>false</externalId>
         <formula>( beforce__r.aren__c
@@ -612,19 +538,6 @@
  + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.aren__c)/8</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>連数_8L</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>satama__c</fullName>
-        <externalId>false</externalId>
-        <formula>detama__c  -  nyutama__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>差玉</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
@@ -694,7 +607,6 @@
     <label>PIADATA</label>
     <listViews>
         <fullName>All</fullName>
-        <columns>adate__c</columns>
         <columns>NAME</columns>
         <columns>sum_atari__c</columns>
         <columns>X22__c</columns>
@@ -705,8 +617,10 @@
         <columns>inputunder40__c</columns>
         <columns>inputup97__c</columns>
         <columns>inputup80__c</columns>
-        <columns>X163__c</columns>
-        <columns>inputunder63__c</columns>
+        <columns>bk_inputup163__c</columns>
+        <columns>bk_inputunder40__c</columns>
+        <columns>bk_inputup97__c</columns>
+        <columns>bk_inputup80__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>atype__c</field>

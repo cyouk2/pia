@@ -71,13 +71,13 @@ global class TestPiaData_Stdev implements Database.Batchable<sObject>,Database.S
             souatarisu += pia.aren__c;
         }
         // pijun 
-		Decimal kaitennsu_pingjun = kaitennsu/re_rows;
-		Decimal souatarisu_pingjun = souatarisu/re_rows;
-		Double kaitennsu_fangcha = 0;
-		Double souatarisu_fangcha = 0;
+        Decimal kaitennsu_pingjun = kaitennsu/re_rows;
+        Decimal souatarisu_pingjun = souatarisu/re_rows;
+        Double kaitennsu_fangcha = 0;
+        Double souatarisu_fangcha = 0;
         for(PIADATA__c pia : scope){
-        	kaitennsu_fangcha += (pia.kaiten__c-kaitennsu_pingjun).pow(2);
-        	souatarisu_fangcha += (pia.aren__c-souatarisu_pingjun).pow(2);
+            kaitennsu_fangcha += (pia.kaiten__c-kaitennsu_pingjun).pow(2);
+            souatarisu_fangcha += (pia.aren__c-souatarisu_pingjun).pow(2);
         }
 
         Decimal kaitennsu_biaozhuncha = Math.sqrt(kaitennsu_fangcha / re_rows);
