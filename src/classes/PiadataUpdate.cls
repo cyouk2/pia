@@ -11,14 +11,16 @@
 global with sharing class PiadataUpdate {
     @HttpPost
     global static String doPost(List<PiadataUpdateBean> beans) {
-        Map<String, PiadataUpdateBean> maps= new Map<String, PiadataUpdateBean>();
+        
+        delete [SELECT id FROM PIA_R__c];
         if(beans != null && beans.size() > 0){
             for (PiadataUpdateBean bean : beans){
-                maps.put(bean.Name,bean);
+                PIA_R__c robj = new PIA_R__c();
+
+
+
             }
-            List<PIADATA__c> list1 = [SELECT id,name, inputup163__c,inputup97__c,inputunder63__c,inputup80__c,inputunder40__c FROM PIADATA__c 
-                    WHERE atype__c = 2
-            ];
+            
             for (PIADATA__c pia : list1){
                 pia.inputup163__c = maps.get(pia.Name).inputup163;
                 pia.inputup97__c = maps.get(pia.Name).inputup97;
