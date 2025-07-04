@@ -8,7 +8,7 @@ global with sharing class PiadataUpdateBK1 {
                 maps.put(bean.Name,bean);
             }
             List<PIADATA__c> list1 = [SELECT id,name, bk_inputup163__c,bk_inputup97__c,bk_inputunder63__c,bk_inputup80__c,bk_inputunder40__c FROM PIADATA__c 
-                    WHERE atype__c = 2
+                    WHERE atype__c = 2 and name in :maps.keySet()
             ];
             for (PIADATA__c pia : list1){
                 pia.bk_inputup163__c = maps.get(pia.Name).inputup163;
