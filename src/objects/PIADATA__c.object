@@ -182,10 +182,10 @@
         <externalId>false</externalId>
         <formula>sum_kaiten__c  /  sum_tuujou__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>平均通常確率</label>
+        <label>通常(70)</label>
         <precision>18</precision>
         <required>false</required>
-        <scale>2</scale>
+        <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
@@ -195,6 +195,19 @@
         <externalId>false</externalId>
         <label>日付</label>
         <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>after20__c</fullName>
+        <externalId>false</externalId>
+        <formula>inputup80__c  -  inputup97__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>after20</label>
+        <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
         <trackTrending>false</trackTrending>
@@ -253,10 +266,10 @@
         <externalId>false</externalId>
         <formula>BK_sum_kaiten__c  /  BK_sum_tuujou__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>bk_平均通常確率</label>
+        <label>bk_通常(70)</label>
         <precision>18</precision>
         <required>false</required>
-        <scale>2</scale>
+        <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
@@ -265,7 +278,7 @@
         <fullName>bk_inputunder40__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>bk_単発_35</label>
+        <label>線(20)_B</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -289,7 +302,7 @@
         <fullName>bk_inputup163__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>bk_up163_35</label>
+        <label>up163(20)_B</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -301,7 +314,7 @@
         <fullName>bk_inputup80__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>bk_確変_60</label>
+        <label>確変_97(40)_B</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -313,8 +326,63 @@
         <fullName>bk_inputup97__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>bk_up97_35</label>
+        <label>up97(20)_B</label>
         <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data1__c</fullName>
+        <externalId>false</externalId>
+        <label>data1</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data2__c</fullName>
+        <externalId>false</externalId>
+        <label>data2</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data3__c</fullName>
+        <externalId>false</externalId>
+        <label>data3</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data4__c</fullName>
+        <externalId>false</externalId>
+        <label>data4</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data5__c</fullName>
+        <externalId>false</externalId>
+        <label>data5</label>
+        <precision>6</precision>
         <required>false</required>
         <scale>0</scale>
         <trackTrending>false</trackTrending>
@@ -336,7 +404,7 @@
         <fullName>inputunder40__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>単発_35</label>
+        <label>線(20)</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -360,7 +428,7 @@
         <fullName>inputup163__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>up163_35</label>
+        <label>up163(20)</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -372,7 +440,7 @@
         <fullName>inputup80__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>確変_60</label>
+        <label>確変_97(40)</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -384,7 +452,7 @@
         <fullName>inputup97__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>up97_35</label>
+        <label>up97(20)</label>
         <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
@@ -460,7 +528,7 @@
  + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
  + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c)/15</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>回転数_15L</label>
+        <label>回転数_15</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -480,7 +548,7 @@
  + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
  + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c)/8</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>回転数_8L</label>
+        <label>回転数_8</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -613,14 +681,10 @@
         <columns>bk_X22__c</columns>
         <columns>kaitensuu_8L__c</columns>
         <columns>kaitensuu_15L__c</columns>
-        <columns>inputup163__c</columns>
-        <columns>inputunder40__c</columns>
         <columns>inputup97__c</columns>
+        <columns>after20__c</columns>
         <columns>inputup80__c</columns>
-        <columns>bk_inputup163__c</columns>
-        <columns>bk_inputunder40__c</columns>
-        <columns>bk_inputup97__c</columns>
-        <columns>bk_inputup80__c</columns>
+        <columns>adate__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>atype__c</field>
@@ -635,7 +699,7 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>番号</label>
+        <label>PIA番号</label>
         <type>Text</type>
     </nameField>
     <searchLayouts>
