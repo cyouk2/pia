@@ -191,6 +191,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>a__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/lightning/r/Report/00O2r000000j2lEEAQ/view?fv0=&apos;&amp; Name , Name )</formula>
+        <label>PIA</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>adate__c</fullName>
         <externalId>false</externalId>
         <label>日付</label>
@@ -248,6 +258,14 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>baoji__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>baoji</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>beforce__c</fullName>

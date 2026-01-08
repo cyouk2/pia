@@ -154,9 +154,35 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>step10__c</fullName>
+        <fullName>BK_sum_kaiten__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>step10</label>
+        <label>bk_集計_回転数</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BK_sum_tuujou__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>bk_集計_通常</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X22__c</fullName>
+        <externalId>false</externalId>
+        <formula>sum_kaiten__c  /  sum_tuujou__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>通常(70)</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -165,9 +191,22 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step11__c</fullName>
+        <fullName>adate__c</fullName>
         <externalId>false</externalId>
-        <label>step11</label>
+        <label>日付</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>after20__c</fullName>
+        <externalId>false</externalId>
+        <formula>inputup80__c  -  inputup97__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>after20</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -176,9 +215,58 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step12__c</fullName>
+        <fullName>aren__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>step12</label>
+        <label>連数</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>asort__c</fullName>
+        <externalId>false</externalId>
+        <label>当たり順</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>atype__c</fullName>
+        <description>1:通常；２：最終</description>
+        <externalId>false</externalId>
+        <label>通常/最終</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>beforce__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>beforce</label>
+        <referenceTo>PIADATA__c</referenceTo>
+        <relationshipLabel>PIADATA</relationshipLabel>
+        <relationshipName>PIADATA</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>bk_X22__c</fullName>
+        <externalId>false</externalId>
+        <formula>BK_sum_kaiten__c  /  BK_sum_tuujou__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>bk_通常(70)</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -187,9 +275,197 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step1__c</fullName>
+        <fullName>bk_inputunder40__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>step1</label>
+        <label>線(20)_B</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bk_inputunder63__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>bk_under63</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bk_inputup163__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>up163(20)_B</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bk_inputup80__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>確変_97(40)_B</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>bk_inputup97__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>up97(20)_B</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data1__c</fullName>
+        <externalId>false</externalId>
+        <label>data1</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data2__c</fullName>
+        <externalId>false</externalId>
+        <label>data2</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data3__c</fullName>
+        <externalId>false</externalId>
+        <label>data3</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data4__c</fullName>
+        <externalId>false</externalId>
+        <label>data4</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>data5__c</fullName>
+        <externalId>false</externalId>
+        <label>data5</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>datesort__c</fullName>
+        <externalId>false</externalId>
+        <formula>LPAD(TEXT( tuujousort__c ), 2,&apos;0&apos;) + &apos;-&apos; +   RIGHT(TEXT(adate__c) , 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>日付通常順</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>inputunder40__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>線(20)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>inputunder63__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>under63</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>inputup163__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>up163(20)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>inputup80__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>確変_97(40)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>inputup97__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>up97(20)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>jisuanhouhuizhuan__c</fullName>
+        <externalId>false</externalId>
+        <formula>kaiten_keisan__c + if( beforce__r.aren__c &gt; 1,130,100)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>計算後回転</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -198,9 +474,61 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step2__c</fullName>
+        <fullName>kaiten__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>step2</label>
+        <label>回転数</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kaiten_keisan__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>回転数_計算用</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kaiten_max__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>回転数_Max</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kaitensuu_15L__c</fullName>
+        <externalId>false</externalId>
+        <formula>( beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c)/15</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>回転数_15</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -209,9 +537,18 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step3__c</fullName>
+        <fullName>kaitensuu_8L__c</fullName>
         <externalId>false</externalId>
-        <label>step3</label>
+        <formula>( beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c)/8</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>回転数_8</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -220,9 +557,35 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step4__c</fullName>
+        <fullName>kakuhenkaiten__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>step4</label>
+        <label>集計_確変回転数</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kakuhennrennRate__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>確変連数</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kakuhenritu__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( aren__c &gt;1, (kakuhenkaiten__c + 163)  /  aren__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>確変率</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -231,10 +594,31 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step5__c</fullName>
+        <fullName>rensuu_8L__c</fullName>
         <externalId>false</externalId>
-        <label>step5</label>
+        <formula>( beforce__r.aren__c
+ + beforce__r.beforce__r.aren__c
+ + beforce__r.beforce__r.beforce__r.aren__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.aren__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.aren__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.aren__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.aren__c
+ + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.aren__c)/8</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>連数_8L</label>
         <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sum_atari__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>集計_当たり</label>
+        <precision>4</precision>
         <required>false</required>
         <scale>0</scale>
         <trackTrending>false</trackTrending>
@@ -242,10 +626,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step6__c</fullName>
+        <fullName>sum_kaiten__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>step6</label>
-        <precision>18</precision>
+        <label>集計_回転数</label>
+        <precision>5</precision>
         <required>false</required>
         <scale>0</scale>
         <trackTrending>false</trackTrending>
@@ -253,10 +638,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step7__c</fullName>
+        <fullName>sum_tuujou__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>step7</label>
-        <precision>18</precision>
+        <label>集計_通常</label>
+        <precision>3</precision>
         <required>false</required>
         <scale>0</scale>
         <trackTrending>false</trackTrending>
@@ -264,230 +650,22 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step8__c</fullName>
+        <fullName>totunyuuRate__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
-        <label>step8</label>
-        <precision>18</precision>
+        <label>突入率</label>
+        <precision>4</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>3</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>step9__c</fullName>
+        <fullName>tuujousort__c</fullName>
         <externalId>false</externalId>
-        <label>step9</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step13__c</fullName>
-        <externalId>false</externalId>
-        <label>step13</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step14__c</fullName>
-        <externalId>false</externalId>
-        <label>step14</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step15__c</fullName>
-        <externalId>false</externalId>
-        <label>step15</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step16__c</fullName>
-        <externalId>false</externalId>
-        <label>step16</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step17__c</fullName>
-        <externalId>false</externalId>
-        <label>step17</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step18__c</fullName>
-        <externalId>false</externalId>
-        <label>step18</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step19__c</fullName>
-        <externalId>false</externalId>
-        <label>step19</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step20__c</fullName>
-        <externalId>false</externalId>
-        <label>step20</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step21__c</fullName>
-        <externalId>false</externalId>
-        <label>step21</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step22__c</fullName>
-        <externalId>false</externalId>
-        <label>step22</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step23__c</fullName>
-        <externalId>false</externalId>
-        <label>step23</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step24__c</fullName>
-        <externalId>false</externalId>
-        <label>step24</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step25__c</fullName>
-        <externalId>false</externalId>
-        <label>step25</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step26__c</fullName>
-        <externalId>false</externalId>
-        <label>step26</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step27__c</fullName>
-        <externalId>false</externalId>
-        <label>step27</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step28__c</fullName>
-        <externalId>false</externalId>
-        <label>step28</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step29__c</fullName>
-        <externalId>false</externalId>
-        <label>step29</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step30__c</fullName>
-        <externalId>false</externalId>
-        <label>step30</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>step31__c</fullName>
-        <externalId>false</externalId>
-        <label>step31</label>
-        <precision>18</precision>
+        <label>通常順</label>
+        <precision>3</precision>
         <required>false</required>
         <scale>0</scale>
         <trackTrending>false</trackTrending>
