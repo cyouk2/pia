@@ -76,12 +76,7 @@ global class TestPiaData implements Database.Batchable<sObject>,Database.Statefu
 
         Integer intTaiNo = Integer.valueOf(this.taiNo);
         String tmpTaiNo = String.valueOf(intTaiNo + 1);
-        // if (tmpTaiNo == '705'){
-        //     tmpTaiNo = '717';
-        // }
-        // if (tmpTaiNo == '699'){
-        //     tmpTaiNo = '723';
-        // }
+
         if (this.taiNo != PIA_END_NO){
             //　集計バッチを実行する
             TestPiaData newbatch = new TestPiaData(tmpTaiNo);
@@ -99,8 +94,7 @@ global class TestPiaData implements Database.Batchable<sObject>,Database.Statefu
 
         Integer index = 1;
         for(PIADATA__c pia : scope){
-            //pia.rkbn__c = 0;
-            //pia.rkdrs__c = 0;
+
             if (index > 1){
                 if (pia.atype__c == 2){
                     X2 += pia.kaiten__c;
@@ -135,7 +129,7 @@ global class TestPiaData implements Database.Batchable<sObject>,Database.Statefu
         Decimal tuijyousu =0;
 
         Decimal BK_kaitennsu =0;
-        // Decimal BK_souatarisu =0;
+
         Decimal BK_tuijyousu =0;
 
         Integer index = 1;
@@ -148,18 +142,7 @@ global class TestPiaData implements Database.Batchable<sObject>,Database.Statefu
         pia1.sum_kaiten__c = kaitennsu;
         pia1.sum_atari__c = souatarisu;
         pia1.sum_tuujou__c = tuijyousu;
-        if (listsize >=36){
-            PIADATA__c piabk = scope.get(35);
-            BK_kaitennsu += piabk.kaiten_keisan__c;
-            BK_tuijyousu += (piabk.atype__c == 1? 1:0); 
-
-            piabk.BK_sum_kaiten__c = BK_kaitennsu;
-            piabk.BK_sum_tuujou__c = BK_tuijyousu;
-        }
         
-        // BK_souatarisu = pia1.BK_sum_atari__c;
-        // BK_tuijyousu = pia1.BK_sum_tuujou__c;
-
         for(PIADATA__c pia : scope){
                 
             if (index > 1){
@@ -169,22 +152,6 @@ global class TestPiaData implements Database.Batchable<sObject>,Database.Statefu
                 pia.sum_kaiten__c = kaitennsu;
                 pia.sum_atari__c = souatarisu;
                 pia.sum_tuujou__c = tuijyousu;
-                if (index >=37){
-                    BK_kaitennsu += pia.kaiten_keisan__c; 
-
-                    BK_tuijyousu += (pia.atype__c == 1? 1:0); 
-                    pia.BK_sum_kaiten__c = BK_kaitennsu; 
-                    pia.BK_sum_tuujou__c = BK_tuijyousu; 
-                }else{
-                    pia.BK_sum_kaiten__c = 0;
-                    pia.BK_sum_tuujou__c = 0;
-                }
-                
-                // BK_souatarisu += pia.aren__c;
-                // BK_tuijyousu +=  (pia.atype__c == 1? 1:0); 
-                
-                // pia.BK_sum_atari__c = BK_souatarisu;
-                // pia.BK_sum_tuujou__c = BK_tuijyousu;
             }
             index = index + 1;
         }

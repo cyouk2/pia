@@ -36,7 +36,7 @@ global class TestPiaData_beforce implements Database.Batchable<sObject> {
             TestPiaData_beforce newbatch = new TestPiaData_beforce(tmpTaiNo);
             Database.executeBatch(newbatch);
         } else {
-            TestPiaData_beforce_001 newbatch = new TestPiaData_beforce_001(PIA_START_NO);
+            RunOver newbatch = new RunOver();
             Database.executeBatch(newbatch);
         }
     }
