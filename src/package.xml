@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>PIADATA__c</members>
-        <name>CustomObject</name>
+        <members>PIADATA__c.BK_sum_kaiten__c</members>
+        <members>PIADATA__c.BK_sum_tuujou__c</members>
+        <members>PIADATA__c.after20__c</members>
+        <members>PIADATA__c.baoji__c</members>
+        <members>PIADATA__c.bk_X22__c</members>
+        <members>PIADATA__c.bk_inputunder40__c</members>
+        <members>PIADATA__c.bk_inputunder63__c</members>
+        <members>PIADATA__c.bk_inputup163__c</members>
+        <members>PIADATA__c.bk_inputup80__c</members>
+        <members>PIADATA__c.bk_inputup97__c</members>
+        <members>PIADATA__c.inputunder40__c</members>
+        <members>PIADATA__c.inputunder63__c</members>
+        <members>PIADATA__c.inputup163__c</members>
+        <members>PIADATA__c.inputup80__c</members>
+        <members>PIADATA__c.inputup97__c</members>
+        <members>PIADATA__c.jisuanhouhuizhuan__c</members>
+        <members>PIADATA__c.kaiten_max__c</members>
+        <members>PIADATA__c.kakuhenkaiten__c</members>
+        <members>PIADATA__c.kakuhennrennRate__c</members>
+        <members>PIADATA__c.kakuhenritu__c</members>
+        <members>PIADATA__c.rensuu_8L__c</members>
+        <members>PIADATA__c.totunyuuRate__c</members>
+        <name>CustomField</name>
     </types>
     <version>46.0</version>
 </Package>

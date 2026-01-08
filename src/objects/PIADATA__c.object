@@ -1,158 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>false</enableActivities>
-    <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <enableLicensing>false</enableLicensing>
-    <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
-    <enableSharing>true</enableSharing>
-    <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>BK_sum_kaiten__c</fullName>
         <defaultValue>0</defaultValue>
@@ -178,40 +25,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>X22__c</fullName>
-        <externalId>false</externalId>
-        <formula>sum_kaiten__c  /  sum_tuujou__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>通常(70)</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>a__c</fullName>
-        <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/lightning/r/Report/00O2r000000j2lEEAQ/view?fv0=&apos;&amp; Name , Name )</formula>
-        <label>PIA</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>adate__c</fullName>
-        <externalId>false</externalId>
-        <label>日付</label>
-        <precision>6</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>after20__c</fullName>
         <externalId>false</externalId>
         <formula>inputup80__c  -  inputup97__c</formula>
@@ -225,59 +38,12 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>aren__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>連数</label>
-        <precision>2</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>asort__c</fullName>
-        <externalId>false</externalId>
-        <label>当たり順</label>
-        <precision>2</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>atype__c</fullName>
-        <description>1:通常；２：最終</description>
-        <externalId>false</externalId>
-        <label>通常/最終</label>
-        <precision>1</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>baoji__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>baoji</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>beforce__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>beforce</label>
-        <referenceTo>PIADATA__c</referenceTo>
-        <relationshipLabel>PIADATA</relationshipLabel>
-        <relationshipName>PIADATA</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>bk_X22__c</fullName>
@@ -350,72 +116,6 @@
         <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>data1__c</fullName>
-        <externalId>false</externalId>
-        <label>data1</label>
-        <precision>6</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>data2__c</fullName>
-        <externalId>false</externalId>
-        <label>data2</label>
-        <precision>6</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>data3__c</fullName>
-        <externalId>false</externalId>
-        <label>data3</label>
-        <precision>6</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>data4__c</fullName>
-        <externalId>false</externalId>
-        <label>data4</label>
-        <precision>6</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>data5__c</fullName>
-        <externalId>false</externalId>
-        <label>data5</label>
-        <precision>6</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>datesort__c</fullName>
-        <externalId>false</externalId>
-        <formula>LPAD(TEXT( tuujousort__c ), 2,&apos;0&apos;) + &apos;-&apos; +   RIGHT(TEXT(adate__c) , 1)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>日付通常順</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -492,82 +192,11 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>kaiten__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>回転数</label>
-        <precision>4</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>kaiten_keisan__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>回転数_計算用</label>
-        <precision>4</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>kaiten_max__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
         <label>回転数_Max</label>
         <precision>4</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>kaitensuu_15L__c</fullName>
-        <externalId>false</externalId>
-        <formula>( beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c)/15</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>回転数_15</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>kaitensuu_8L__c</fullName>
-        <externalId>false</externalId>
-        <formula>( beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c
- + beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.beforce__r.kaiten_keisan__c)/8</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>回転数_8</label>
-        <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
         <trackTrending>false</trackTrending>
@@ -632,42 +261,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>sum_atari__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>集計_当たり</label>
-        <precision>4</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>sum_kaiten__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>集計_回転数</label>
-        <precision>5</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>sum_tuujou__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>集計_通常</label>
-        <precision>3</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>totunyuuRate__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
@@ -679,96 +272,4 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <fields>
-        <fullName>tuujousort__c</fullName>
-        <externalId>false</externalId>
-        <label>通常順</label>
-        <precision>3</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <label>PIADATA</label>
-    <listViews>
-        <fullName>All</fullName>
-        <columns>NAME</columns>
-        <columns>sum_atari__c</columns>
-        <columns>X22__c</columns>
-        <columns>bk_X22__c</columns>
-        <columns>kaitensuu_8L__c</columns>
-        <columns>kaitensuu_15L__c</columns>
-        <columns>inputup97__c</columns>
-        <columns>after20__c</columns>
-        <columns>inputup80__c</columns>
-        <columns>adate__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>atype__c</field>
-            <operation>equals</operation>
-            <value>2</value>
-        </filters>
-        <filters>
-            <field>sum_atari__c</field>
-            <operation>notEqual</operation>
-            <value>0</value>
-        </filters>
-        <label>All</label>
-    </listViews>
-    <nameField>
-        <label>PIA番号</label>
-        <type>Text</type>
-    </nameField>
-    <searchLayouts>
-        <customTabListAdditionalFields>adate__c</customTabListAdditionalFields>
-        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
-        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
-        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <excludedStandardButtons>Accept</excludedStandardButtons>
-        <searchResultsAdditionalFields>adate__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>asort__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>aren__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>kaiten__c</searchResultsAdditionalFields>
-    </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
-    <visibility>Public</visibility>
-    <webLinks>
-        <fullName>CustomLink1</fullName>
-        <availability>online</availability>
-        <displayType>link</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <hasMenubar>false</hasMenubar>
-        <hasScrollbars>true</hasScrollbars>
-        <hasToolbar>false</hasToolbar>
-        <height>600</height>
-        <isResizable>true</isResizable>
-        <linkType>url</linkType>
-        <masterLabel>変化率</masterLabel>
-        <openType>newWindow</openType>
-        <position>none</position>
-        <protected>false</protected>
-        <showsLocation>false</showsLocation>
-        <showsStatus>false</showsStatus>
-        <url>/lightning/r/Report/{!$User.REPORT_ID__c}/view?fv0={!PIADATA__c.Name}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>CustomLink2</fullName>
-        <availability>online</availability>
-        <displayType>link</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <hasMenubar>false</hasMenubar>
-        <hasScrollbars>true</hasScrollbars>
-        <hasToolbar>false</hasToolbar>
-        <height>600</height>
-        <isResizable>true</isResizable>
-        <linkType>url</linkType>
-        <masterLabel>連数変化率</masterLabel>
-        <openType>newWindow</openType>
-        <position>none</position>
-        <protected>false</protected>
-        <showsLocation>false</showsLocation>
-        <showsStatus>false</showsStatus>
-        <url>/lightning/r/Report/{!$User.REPORT_ID2__c}/view?fv0={!PIADATA__c.Name}</url>
-    </webLinks>
 </CustomObject>
