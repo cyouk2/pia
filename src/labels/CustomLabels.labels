@@ -5,7 +5,7 @@
         <language>ja</language>
         <protected>true</protected>
         <shortDescription>MAXLINES</shortDescription>
-        <value>70</value>
+        <value>50</value>
     </labels>
     <labels>
         <fullName>PIA_END_NO</fullName>
@@ -13,27 +13,6 @@
         <protected>true</protected>
         <shortDescription>PIA_END_NO</shortDescription>
         <value>612</value>
-    </labels>
-    <labels>
-        <fullName>PIA_INDEX_S</fullName>
-        <language>ja</language>
-        <protected>true</protected>
-        <shortDescription>PIA_INDEX_S</shortDescription>
-        <value>0</value>
-    </labels>
-    <labels>
-        <fullName>PIA_R</fullName>
-        <language>ja</language>
-        <protected>true</protected>
-        <shortDescription>PIA_R</shortDescription>
-        <value>2</value>
-    </labels>
-    <labels>
-        <fullName>PIA_S</fullName>
-        <language>ja</language>
-        <protected>true</protected>
-        <shortDescription>PIA_S</shortDescription>
-        <value>3</value>
     </labels>
     <labels>
         <fullName>PIA_START_NO</fullName>

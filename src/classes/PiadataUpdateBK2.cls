@@ -1,21 +1,26 @@
 @RestResource(urlMapping='/piadataupdatebk2/*')
 global with sharing class PiadataUpdateBK2 {
     @HttpPost
-    global static String doPost(List<PiadataUpdateBean> beans) {
-        Map<String, PiadataUpdateBean> maps= new Map<String, PiadataUpdateBean>();
+    global static String doPost(List<String> beans) {
+
+        Map<String, String> maps= new Map<String, String>();
+        system.debug(beans);
         if(beans != null && beans.size() > 0){
-            for (PiadataUpdateBean bean : beans){
-                maps.put(bean.Name,bean);
+            for (String item : beans) {
+                maps.put(getValueByKey(item,'Name'), item);
             }
             List<PIADATA__c> list1 = [SELECT id,name, data1__c,data2__c,data3__c,data4__c,data5__c FROM PIADATA__c 
-                    WHERE atype__c = 2 and name in :maps.keySet()
+                WHERE atype__c = 2 and name in :maps.keySet()
             ];
+            
             for (PIADATA__c pia : list1){
-                pia.data1__c = maps.get(pia.Name).data1;
-                pia.data2__c = maps.get(pia.Name).data2;
-                pia.data3__c = maps.get(pia.Name).data3;
-                pia.data4__c = maps.get(pia.Name).data4;
-                pia.data5__c = maps.get(pia.Name).data5;
+                for(Integer i = 1; i <= 5; i++){
+                    String colName = 'data'+i;
+                    String data1 = getValueByKey(maps.get(pia.Name),colName);
+                    if (data1 != null){
+                        pia.put(colName+'__c',Integer.ValueOf(data1));
+                    }
+                }
             }
             
             try{
@@ -26,15 +31,26 @@ global with sharing class PiadataUpdateBK2 {
             return 'RUNRESULT_OK';
         }
         return 'OK';
-    }
 
-    global class PiadataUpdateBean {
-        public PiadataUpdateBean () {}
-        public String Name { get; set; }
-        public Integer data1  { get; set; }
-        public Integer data2  { get; set; }
-        public Integer data3  { get; set; }
-        public Integer data4  { get; set; }
-        public Integer data5 { get; set; }
+    }   
+
+    public static String getValueByKey(String itemMap, String strKey){
+        // System.debug(itemMap);
+        itemMap = itemMap.replace('\'','"');
+        JSONParser parser = JSON.createParser(itemMap);
+
+        while (parser.nextToken() != null) {
+            // 2. 寻找特定字段
+            if ((parser.getCurrentToken() == JSONToken.FIELD_NAME) && 
+                (parser.getText() == strKey)) {
+                
+                // 移动到下一个 Token 以获取值
+                parser.nextToken();
+                System.debug(strKey + ' : ' + parser.getText()); // 输出: success
+                return parser.getText();
+            }
+        
+        }
+        return null;
     }
 }
